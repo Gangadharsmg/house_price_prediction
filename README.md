@@ -1,2 +1,1 @@
-# house_price_prediction
-MLOps implementation
+# House Price Prediction with MLOps Lifecycle Integration
