@@ -14,8 +14,8 @@ print("Dataset Head:\n", data.head())
 print("Dataset Info:\n", data.info())
 
 # Feature and target selection
-X = data[["SquareFeet", "Bedrooms", "Age"]]
-y = data["Price"]
+X = data[["area", "bedrooms", "stories"]]
+y = data["price"]
 
 # Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(
@@ -49,7 +49,7 @@ plt.show()
 
 # Predict on new data
 new_data = pd.DataFrame(
-    {"SquareFeet": [2000, 1500], "Bedrooms": [3, 2], "Age": [10, 5]}
+    {"area": [4000, 5000], "bedrooms": [3, 2], "stories": [2, 4]}
 )
 predictions = model.predict(new_data)
 print(f"Predictions for new data:\n{predictions}")
