@@ -10,7 +10,9 @@ RUN pip install -r requirements.txt
 # Expose the API port
 EXPOSE 8000
 
-COPY . /code
+COPY /app /code/app
+COPY /dataset /code/dataset
+COPY /src /code/src
 
 WORKDIR /code/app
 CMD ["python", "app.py"]
