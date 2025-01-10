@@ -13,7 +13,7 @@ app = FastAPI()
 
 # Define the input data structure
 class HouseData(BaseModel):
-    area: float
+    area: int
     bedrooms: int
     stories: int
 
