@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: house-price-pred
+  labels:
+    app: house-price-pred
+spec:
+  replicas: 1 # Number of replicas
+  selector:
+    matchLabels:
+      app: house-price-pred
+  template:
+    metadata:
+      labels:
+        app: house-price-pred
+    spec:
+      containers:
+      - name: house-price-pred-container
+        image: gangadhars/house-price-pred:latest # Replace with your Docker Hub image
+        ports:
+        - containerPort: 8000 # Replace with the port your app listens on
+        env:
+        - name: ENVIRONMENT
+          value: "production" # Example environment variable
