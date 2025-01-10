@@ -1,0 +1,22 @@
+# Data manipulation and processing
+pandas==1.5.3
+numpy==1.24.2
+
+# Machine Learning
+scikit-learn==1.2.2
+
+# Experiment Tracking
+mlflow==2.4.1
+
+# Data Versioning
+dvc[s3,gdrive]==2.58.0
+
+# Model Serving
+fastapi==0.100.0
+uvicorn==0.23.0
+
+# Monitoring (optional)
+prometheus-client==0.16.0
+
+# Python environment management
+python-dotenv==1.0.0
